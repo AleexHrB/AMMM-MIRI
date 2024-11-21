@@ -4,14 +4,14 @@
 using namespace std;
 
 
-int main() {
+int main(int argc, char** argv) {
 	cout.setf(ios::fixed);
 	cout.precision(2); 
 	srand(time(NULL));
 
 	int D,N;
 
-	cin >> N;
+    N = atoi(argv[1]);
 	D = rand()%N + 1;
 
 	vector<int> n(D);
