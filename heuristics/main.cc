@@ -3,6 +3,7 @@
 #include <fstream>
 #include <stdlib.h>
 #include "greedy.cc"
+#include "hillClimbing.cc"
 using namespace std;
 
 bool readInteger(const string& s, unsigned int& n) {
@@ -60,7 +61,9 @@ int main(int argc, char **argv) {
         return -1;
     }
 
-    bool greedySolution = argv[2][2] == 'e';
+    bool greedySolution = argv[2][0] == '1';
+    bool localSearch = argv[2][0] == '2';
+    bool GRASP = argv[2][0] == '3';
 
     const char* nameFile = argv[1];
     ifstream file(nameFile);
@@ -112,16 +115,43 @@ int main(int argc, char **argv) {
 
     float **m = (float**)malloc(N*sizeof(float*));
 
+    bool selected[N];
     for (unsigned int i = 0; i < N; ++i) {
         m[i] = (float*) malloc(N*sizeof(float));
         while (not readArrayFloat(s,m[i], N)) getline(file, s);
-    }
+        selected[i] = false;
+   }
 
     file.close();
 
-    if (greedySolution) greedy(D,np,N,d,m);
-    else cout << "Juan Maricon" << endl;
+    bool sol;
+    if (greedySolution || localSearch) sol = greedy(D,np,N,d,m, selected);
+    if(!sol) return -1;
+   
+    if (localSearch || GRASP) hillClimbing(D,np,N,d,m, selected);
+
+    float objective = 0.0f;
+    int total = 0;
+    for (int i = 0; i < N; ++i) {
+        if (selected [i]) {
+            total++;
+            for(int j = i + 1; j < N; ++j) {
+                if (selected[j]) objective += m[i][j];
+            }
+        }
+     }
+     objective = 2.0f/(total*(total - 1)) * objective;
+     
+    cout << "OBJECTIVE: " << objective << endl;
+    cout << "Commision:  ";
+
+    for (int i = 0; i < N; ++i) {
+        if (selected[i]) cout << i + 1 << " ";  
+    }
+    cout << endl;
+    
 
     for (unsigned int i = 0; i < N; ++i) free(m[i]);
     free(m);
 }
+

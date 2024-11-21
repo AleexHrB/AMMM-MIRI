@@ -56,14 +56,14 @@ bool feasible(unsigned int candidate, unsigned int D, unsigned int* np, bool* va
 
 inline bool validSolution(unsigned int D, unsigned int* np) {
 
-    for (unsigned int p = 0; p < D; ++p) if (np[p] != 0) return false;
-    return true;
+	for (unsigned int p = 0; p < D; ++p) if (np[p] != 0) return false;
+	return true;
 }
 
-bool* greedy(unsigned int D, unsigned int* np, unsigned int N, unsigned int* d, float** m) {
+bool greedy(unsigned int D, unsigned int* np, unsigned int N, unsigned int* d, float** m, bool* selected) {
+
     
     bool valid[N];
-    bool selected[N];
     list<unsigned int> candidates;
 
 
@@ -105,35 +105,17 @@ bool* greedy(unsigned int D, unsigned int* np, unsigned int N, unsigned int* d, 
         }
 
         else valid[bestCandidate] = false;
-        //for (unsigned int p = 0; p < D; ++p) cout <<np[p]<<" ";
+        //for (unsigned int p = 0; p < D; ++p) out <<np[p]<<" ";
         //cout << endl;
         bestCandidate = findBestGuy(candidates, selected, valid, N, m);
     }
 
     if (commite > 0) {
-        cout << "There is no solution using a greedy algorithm" << endl;
-        return nullptr;
+        //cout << "There is no solution using a greedy algorithm" << endl;
+        return false;
     }
 
     else {
-        
-        cout << "OBJECTIVE: ";
-
-        float f = 0.0f;
-
-        for (unsigned int i = 0; i < N; ++i) {
-            for (unsigned int j = i+1; j < N and selected[i]; ++j) {
-                if (selected[j]) f += m[i][j];
-            }
-        }
-
-        unsigned int finalNum = candidates.size();
-        f *= 2.0f/(finalNum * (finalNum - 1));
-        cout << f << endl;
-
-        cout << "Commission: ";
-        for (unsigned int i = 0; i < N; ++i) if (selected[i]) cout << i + 1 << " ";
-        cout << endl;
-        return selected;
+        return true;
     }
 }

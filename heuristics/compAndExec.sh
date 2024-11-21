@@ -7,10 +7,13 @@ N=8
 for i in $(seq $N)
 do
     echo "Our solution to problem $i:"
-    ./heuristic.exe ../ilp/project.$i.dat gre
+    echo "Greedy"
+    ./heuristic.exe ../samples/project.$i.dat 1
+    echo "Local Search"
+    ./heuristic.exe ../samples/project.$i.dat 2
     echo "========================"
     echo "Real solution to problem $i:"
-    cat ../ilp/project.$i.sol
+    cat ../samples/project.$i.sol
     echo "========================"
 done
 rm heuristic.exe
