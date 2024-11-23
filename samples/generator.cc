@@ -12,7 +12,7 @@ int main(int argc, char** argv) {
 	int D,N;
 
   N = atoi(argv[1]);
-	D = rand()%N + 1;
+	D = rand()%(N/4) + rand()%(N/4) + rand()%(N/4) + rand()%(N/4);
 
 	vector<int> n(D);
 	vector<int> d(N);
