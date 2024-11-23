@@ -25,7 +25,7 @@ int main(int argc, char** argv) {
 	for (int i = 0; i < D; ++i) {
 		int aux = n[i];
 		for (int j = k; j < k + aux; ++j) {
-            d[j] = i;
+            d[j] = i + 1;
 		}
         k = k + aux;
 	}
