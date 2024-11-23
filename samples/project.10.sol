@@ -1,2 +1,0 @@
-OBJECTIVE: 0.4826667
-Commission: 1 4 5 7 9 10 

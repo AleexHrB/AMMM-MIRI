@@ -3,7 +3,7 @@ echo "Compiling..."
 g++ -O2 -o heuristic.exe main.cc
 echo "Compilation done! Executing heurstics..."
 sleep 1
-N=8
+N=28
 for i in $(seq $N)
 do
     echo "Our solution to problem $i:"

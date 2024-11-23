@@ -54,11 +54,6 @@ bool feasible(unsigned int candidate, unsigned int D, unsigned int* np, bool* va
     return true;
 }
 
-inline bool validSolution(unsigned int D, unsigned int* np) {
-
-	for (unsigned int p = 0; p < D; ++p) if (np[p] != 0) return false;
-	return true;
-}
 
 bool greedy(unsigned int D, unsigned int* np, unsigned int N, unsigned int* d, float** m, bool* selected) {
 
