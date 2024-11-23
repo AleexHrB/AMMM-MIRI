@@ -39,13 +39,34 @@ int main(int argc, char** argv) {
 	
 
 	for (int i = 0; i < N; ++i) {
-		m[i][i] = 1;
-		for (int j = i + 1; j < N; ++j) {
-			m[i][j] =  float((rand())) / float((RAND_MAX));
-			m[j][i] = m[i][j];
+        m[i][i] = 1;
+        for (int j = i + 1; j < N; ++j) {
+            int chance = rand()%100;
+            if (chance < 2) {
+                m[i][j] = 0.0f; 
+                m[j][i] = 0.0f;
+            }
 
-		}
-	}
+            else if (chance < 10) {
+                m[i][j] = float (rand())/ float(RAND_MAX); 
+                m[i][j] = m[i][j] * 0.15; 
+                m[j][i] = m[i][j];
+            }
+            else if (chance < 30) {
+                m[i][j] = float (rand())/ float(RAND_MAX); 
+                m[i][j] = m[i][j] * 0.15 + 0.85;
+                m[j][i] = m[i][j];
+            }
+            else {
+                m[i][j] = float (rand())/ float(RAND_MAX); 
+                m[i][j] = m[i][j] * 0.7 + 0.15; 
+                m[j][i] = m[i][j];
+
+            }
+
+
+        }
+    }
 
 	cout << "D = " << D << ";" << endl;
 	cout << "n = [ ";
