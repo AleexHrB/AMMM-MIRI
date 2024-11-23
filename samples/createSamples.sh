@@ -1,5 +1,5 @@
 #!/bin/bash
-N=20
+N=50
 T=$(($N+8))
 INF=9
 echo "Compiling..."
