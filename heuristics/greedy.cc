@@ -40,7 +40,7 @@ bool feasible(unsigned int candidate, unsigned int D, unsigned int* np, bool* va
             auto it = candidates.begin();
             while (not exist and it != candidates.end()) {
                 unsigned int aux = *it;
-                exist = m[x][aux] > 0.85 and m[candidate][aux] > 0.85;
+                exist = m[x][aux] > 0.85f and m[candidate][aux] > 0.85f;
                 ++it;
             }
 
