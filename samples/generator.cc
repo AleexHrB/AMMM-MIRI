@@ -11,19 +11,30 @@ int main(int argc, char** argv) {
 
 	int D,N;
 
-    N = atoi(argv[1]);
+  N = atoi(argv[1]);
 	D = rand()%N + 1;
 
 	vector<int> n(D);
 	vector<int> d(N);
 	vector<vector<float>> m(N, vector<float>(N));
-
 	for (int i = 0; i < D; ++i) {
 		n[i] = rand() % ((N + D - 1)/D + 1);
 	}
-	for (int i = 0; i < N; ++i) {
-		d[i] = (rand() % D) + 1;
+
+	int k = 0;
+	for (int i = 0; i < D; ++i) {
+		int aux = n[i];
+		for (int j = k; j < k + aux; ++j) {
+            d[j] = i;
+		}
+        k = k + aux;
 	}
+    
+
+    for (int i = k; i < N; ++i) {
+		d[i] = (rand() % D) + 1;
+    }
+	
 
 	for (int i = 0; i < N; ++i) {
 		m[i][i] = 1;

@@ -1,7 +1,7 @@
 #!/bin/bash
-N=20
+N=22
 T=$(($N+8))
-INF=9
+INF=21
 echo "Compiling..."
 g++ -O2 -o generator.exe generator.cc
 
