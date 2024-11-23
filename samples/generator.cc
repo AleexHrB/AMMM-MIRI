@@ -12,8 +12,9 @@ int main(int argc, char** argv) {
 	int D,N;
 
   N = atoi(argv[1]);
-	D = rand()%(N/5) + rand()%(N/5) + rand()%(N/5) + rand()%(N/5);
-    if (D == 0) D = 1;
+    int  maxD = (N + 1)/2;
+    //The sum of random variables approximates to a normal distribution
+	D = rand()%(maxD/4) + rand()%(maxD/4) + rand()%(maxD/4) + rand()%(maxD/4) + 1;
 
 	vector<int> n(D);
 	vector<int> d(N);
