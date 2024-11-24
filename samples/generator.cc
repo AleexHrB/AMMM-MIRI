@@ -11,7 +11,7 @@ int main(int argc, char** argv) {
 
 	int D,N;
 
-  N = atoi(argv[1]);
+    N = atoi(argv[1]);
     int  maxD = (N + 1)/2;
     //The sum of random variables approximates to a normal distribution
 	D = rand()%(maxD/4) + rand()%(maxD/4) + rand()%(maxD/4) + rand()%(maxD/4) + 1;
@@ -20,7 +20,7 @@ int main(int argc, char** argv) {
 	vector<int> d(N);
 	vector<vector<float>> m(N, vector<float>(N));
 	for (int i = 0; i < D; ++i) {
-		n[i] = rand() % ((N + D - 1)/D + 1);
+		n[i] = rand() % (N/D);
 	}
 
 	int k = 0;
@@ -47,12 +47,12 @@ int main(int argc, char** argv) {
                 m[j][i] = 0.0f;
             }
 
-            else if (chance < 10) {
+            else if (chance < 8) {
                 m[i][j] = float (rand())/ float(RAND_MAX); 
                 m[i][j] = m[i][j] * 0.15; 
                 m[j][i] = m[i][j];
             }
-            else if (chance < 30) {
+            else if (chance < 32) {
                 m[i][j] = float (rand())/ float(RAND_MAX); 
                 m[i][j] = m[i][j] * 0.15 + 0.85;
                 m[j][i] = m[i][j];
