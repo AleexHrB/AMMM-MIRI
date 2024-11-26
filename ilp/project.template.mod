@@ -59,8 +59,8 @@ subject to {
 
     //If not get along well then extra professor
     forall(i in nProf)
-        forall(j in nProf: j > i) {
-            y_ij[i][j] - sum(k in nProf: m[i][k] > 0.85 && m[j][k] > 0.85) x_i[k] <= b_ij[i][j];
+        forall(j in nProf: j > i && m[i][j] < 0.15) {
+            sum(k in nProf: m[i][k] > 0.85 && m[j][k] > 0.85) x_i[k] >= y_ij[i][j];
         }
 
 }
