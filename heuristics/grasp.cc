@@ -1,30 +1,13 @@
 #include <iostream>
 #include <list>
-#include <map>
+#include <vector>
+#include <cfloat>
 using namespace std;
 
 #define ERROR -1
 
-int findBestGuys(const list<unsigned int>& candidates, bool* selected, bool* valid, unsigned int N, float** m) {
+float alphaHold;
 
-    int bestGuy = ERROR;
-    float compat = -1.0f;
-
-    for (unsigned int i = 0; i < N; ++i) {
-
-        if (not valid[i] or selected[i]) continue;
-
-        float localCompat = 0.0f;
-        for (unsigned int cand : candidates) localCompat += m[i][cand];
-
-        if (localCompat > compat) {
-            compat = localCompat;
-            bestGuy = i;
-        }
-    }
-
-    return bestGuy;
-}
 
 bool feasibleSol(unsigned int candidate, unsigned int D, unsigned int* np, bool* valid, unsigned int N, unsigned int* d, float** m, const list<unsigned int>& candidates) {
 
@@ -47,72 +30,73 @@ bool feasibleSol(unsigned int candidate, unsigned int D, unsigned int* np, bool*
             if (not exist) return false;
         }
     }
-
-    //Remove ones that not feasible and return true
-    for (unsigned int i = 0; i < N; ++i) if (m[candidate][i] == 0.0f) valid[i] = false;
-
     return true;
+}
+
+pair<float, float> setRCL(const list<unsigned int>& candidates, bool* selected, bool* valid, unsigned int N, float** m, vector<pair<float, unsigned int>>& rcl, unsigned int D, unsigned int* np, unsigned* d) {
+
+    //Best / Worst
+    pair<float, float> p = {-1.0f, FLT_MAX};
+
+    for (unsigned int i = 0; i < N; ++i) {
+
+        if (not valid[i] or selected[i] or not feasibleSol(i, D, np, valid, N, d, m, candidates)) {
+            rcl[i] = {-1.0f, i};
+            continue;
+        }
+
+        float localCompat = 0.0f;
+        for (unsigned int cand : candidates) localCompat += m[i][cand];
+        rcl[i] = {localCompat, i};
+
+        if (localCompat > p.first) p.first = localCompat;
+        if (localCompat < p.second) p.second = localCompat;
+    }
+
+    return p;
 }
 
 
 bool graspInit(unsigned int D, unsigned int* np, unsigned int N, unsigned int* d, float** m, bool* selected, float alpha) {
 
-    
     bool valid[N];
-    list<unsigned int> candidates;
+    srand(time(NULL));
 
+    unsigned int npCopy[D];
 
     for (unsigned int i = 0; i < N; ++i) {
-        valid[i] = true;
         selected[i] = false;
+        valid[i] = true;
     }
 
     unsigned int commite = 0;
-    for (unsigned int p = 0; p < D; ++p) commite += np[p];
-
-
-    map<float, unsigned int> mp;
-
-    for (unsigned int i = 0; i < N; ++i) {
-        float f = 0.0f;
-        for (unsigned int j = 0; j < N; ++j) f += m[i][j];
-        mp.insert({f, i});
+    for (unsigned int p = 0; p < D; ++p) {
+        commite += np[p];
+        npCopy[p] = np[p];
     }
 
-    auto it = mp.begin();
-    int bestCandidate = it -> second;
-    ++it;
+    list<unsigned int> candidates;
 
-    while (it != mp.end() and not feasibleSol(bestCandidate, D, np, valid, N, d, m, candidates)) {
-        bestCandidate = it -> second;
-        ++it;
+    while (commite > 0) {
+        vector<pair<float, unsigned int>> rcl(N);
+        pair<float, float> maxMin = setRCL(candidates, selected, valid, N, m, rcl, D, npCopy, d);
+
+        if (maxMin.first < 0.0f) break;
+
+        alphaHold = maxMin.first - alpha * (maxMin.first - maxMin.second);
+        rcl.erase(remove_if(rcl.begin(), rcl.end(), [] (const pair<float, unsigned int>& p) {
+                return p.first < alphaHold;
+                }), rcl.end());
+
+        if (rcl.empty()) break;
+        unsigned int choosen = rand() % rcl.size();
+        unsigned int selectedGuy = rcl[choosen].second;
+        candidates.push_back(selectedGuy);
+        selected[selectedGuy] = true;
+        for (unsigned int i = 0; i < N; ++i) if (m[selectedGuy][i] == 0.0f) valid[i] = false;
+        --npCopy[d[selectedGuy] - 1];
+        --commite;
     }
 
-    if (it == mp.end()) bestCandidate = ERROR;
-
-    while (commite > 0 and bestCandidate != ERROR) {
-
-        if (feasibleSol(bestCandidate, D, np, valid, N, d, m, candidates)) {
-            candidates.push_back(bestCandidate);
-            --commite;
-            --np[d[bestCandidate] - 1];
-            selected[bestCandidate] = true;
-        }
-
-        else valid[bestCandidate] = false;
-        //for (unsigned int p = 0; p < D; ++p) out <<np[p]<<" ";
-        //cout << endl;
-        bestCandidate = findBestGuys(candidates, selected, valid, N, m);
-    }
-
-    if (commite > 0) {
-        //cout << "There is no solution using a greedy algorithm" << endl;
-        return false;
-    }
-
-    else {
-        return true;
-    }
+    return commite == 0;
 }
-
-

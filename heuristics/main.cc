@@ -164,8 +164,8 @@ int main(int argc, char **argv) {
     
     if (localSearch) hillClimbing(D,np,N,d,m, selected);
 
-    float alpha = 0.0;
-    unsigned int iter = 10;
+    float alpha = 0.20;
+    unsigned int iter = 30000;
     if (GRASP) sol = graspExecution(D, np, N, d,m, selected, alpha, iter); 
     if(!sol) return -1;
     float objective = objectiveFunc(selected, m, N); 
