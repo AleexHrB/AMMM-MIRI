@@ -11,6 +11,8 @@ do
     ./heuristic.exe ../samples/project.$i.dat 1
     echo "Local Search"
     ./heuristic.exe ../samples/project.$i.dat 2
+    echo "GRASP"
+    ./heuristic.exe ../samples/project.$i.dat 3
     echo "========================"
     echo "Real solution to problem $i:"
     cat ../samples/project.$i.sol

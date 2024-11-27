@@ -3,6 +3,7 @@
 #include <fstream>
 #include <stdlib.h>
 #include "greedy.cc"
+#include "grasp.cc"
 #include "hillClimbing.cc"
 using namespace std;
 
@@ -53,6 +54,40 @@ bool readArrayFloat(string& s, float* v, unsigned int size) {
 
 }
 
+float objectiveFunc(bool* selected, float** m, unsigned int N) {
+    float objective = 0.0f;
+    int total = 0;
+    for (int i = 0; i < N; ++i) {
+        if (selected [i]) {
+            total++;
+            for(int j = i + 1; j < N; ++j) {
+                if (selected[j]) objective += m[i][j];
+            }
+        }
+    }
+    objective = 2.0f/(total*(total - 1)) * objective;
+    return objective;
+}
+
+bool graspExecution(unsigned int D, unsigned int* np, unsigned int N, unsigned int* d, float** m, bool* selected, float alpha, unsigned int iter) { 
+    float bestObjective = 0.0f;
+    bool solution = false;
+    for (unsigned int i = 0; i < iter; ++i) {
+        bool tempSolution[N];
+        float tempObjective = 0.0f;
+        if (graspInit(D, np, N, d, m, tempSolution, alpha)) {
+            hillClimbing(D,np,N,d,m,tempSolution);
+            tempObjective = objectiveFunc(tempSolution, m, N);
+        }
+        
+        if (tempObjective > bestObjective) {
+            bestObjective = tempObjective;
+            for (int j = 0; j < N; ++j) selected[j] = tempSolution[j];
+            solution = true;
+        }
+    }
+    return solution;
+}
 
 int main(int argc, char **argv) {
 
@@ -124,24 +159,17 @@ int main(int argc, char **argv) {
 
     file.close();
 
-    bool sol;
+    bool sol = true;
     if (greedySolution || localSearch) sol = greedy(D,np,N,d,m, selected);
-    if(!sol) return -1;
-   
-    if (localSearch || GRASP) hillClimbing(D,np,N,d,m, selected);
+    
+    if (localSearch) hillClimbing(D,np,N,d,m, selected);
 
-    float objective = 0.0f;
-    int total = 0;
-    for (int i = 0; i < N; ++i) {
-        if (selected [i]) {
-            total++;
-            for(int j = i + 1; j < N; ++j) {
-                if (selected[j]) objective += m[i][j];
-            }
-        }
-     }
-     objective = 2.0f/(total*(total - 1)) * objective;
-     
+    float alpha = 0.0;
+    unsigned int iter = 10;
+    if (GRASP) sol = graspExecution(D, np, N, d,m, selected, alpha, iter); 
+    if(!sol) return -1;
+    float objective = objectiveFunc(selected, m, N); 
+    
     cout << "OBJECTIVE: " << objective << endl;
     cout << "Commision:  ";
 
