@@ -4,7 +4,7 @@ g++ -O2 -o heuristic.exe main.cc
 echo "Compilation done! Executing heurstics..."
 sleep 1
 
-for f in $(ls ../samples/*.dat)
+for f in $(ls ../samples/*.dat | sort -V)
 do
     echo "Our solution to $f:"
     echo "Greedy"
