@@ -3,7 +3,8 @@ echo "Compiling..."
 g++ -O2 -o heuristic.exe main.cc
 echo "Compilation done! Executing heuristics..."
 
-alpha=(0.05 0.10 0.15 0.20 0.25 0.30 0.50 1.00)
+#alpha=(0.05 0.10 0.15 0.20 0.25 0.30 0.50 1.00)
+alpha=(0.35 0.40)
 N=3
 
 

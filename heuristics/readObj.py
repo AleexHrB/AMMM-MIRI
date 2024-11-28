@@ -3,7 +3,7 @@ import re
 
 
 def main():
-    alpha = "1.00"
+    alpha = "0.40"
     i = "3"
     name = f"output_iteration_alpha={alpha}_{i}.log"
     f = open(name, "r")
