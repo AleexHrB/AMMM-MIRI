@@ -159,15 +159,15 @@ int main(int argc, char **argv) {
 
     file.close();
 
+    float alpha = 0.21;
+    unsigned int iter = 30000;
     bool sol = true;
     if (greedySolution || localSearch) sol = greedy(D,np,N,d,m, selected);
+    else if (GRASP) sol = graspExecution(D, np, N, d,m, selected, alpha, iter); 
+    if(!sol) return -1;
     
     if (localSearch) hillClimbing(D,np,N,d,m, selected);
 
-    float alpha = 0.21;
-    unsigned int iter = 30000;
-    if (GRASP) sol = graspExecution(D, np, N, d,m, selected, alpha, iter); 
-    if(!sol) return -1;
     float objective = objectiveFunc(selected, m, N); 
     
     cout << "OBJECTIVE: " << objective << endl;
