@@ -159,7 +159,7 @@ int main(int argc, char **argv) {
 
     file.close();
 
-    float alpha = 0.21;
+    float alpha = GRASP ? atof(argv[3]) : 0.00f;
     unsigned int iter = 30000;
     bool sol = true;
     if (greedySolution || localSearch) sol = greedy(D,np,N,d,m, selected);
