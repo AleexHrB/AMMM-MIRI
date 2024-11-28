@@ -3,8 +3,8 @@ echo "Compiling..."
 g++ -O2 -o heuristic.exe main.cc
 echo "Compilation done! Executing heuristics..."
 
-#alpha=(0.05 0.10 0.15 0.20 0.25 0.30 0.50 1.00)
-alpha=(0.35 0.40)
+#alpha=(0.05 0.10 0.15 0.20 0.25 0.30 0.35 0.40 0.50 1.00)
+alpha=(0.45 0.60 0.70 0.80 0.90)
 N=3
 
 
@@ -13,7 +13,7 @@ do
     for i in $(seq $N)
     do
         echo "Starting iteration $i alpha=$a"
-        output_file="output_iteration_alpha=${a}_$i.log"
+        output_file="./alphaGrasp/output_iteration_alpha=${a}_$i.log"
         > "$output_file"                     
 
         echo "=======================================================" >> "$output_file"
