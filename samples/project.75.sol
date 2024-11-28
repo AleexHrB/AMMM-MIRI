@@ -1,0 +1,6 @@
+OBJECTIVE: 0.6562573
+Commission: 1 2 4 5 7 8 10 11 13 15 16 21 25 30 41 43 46 60 68 
+
+real	0m22.045s
+user	4m30.246s
+sys	0m0.662s
