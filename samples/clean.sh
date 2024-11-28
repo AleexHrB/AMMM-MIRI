@@ -11,4 +11,5 @@ for file in $(ls project.*); do
         echo "Deleted: $file"
     fi
 done
+rm generator.exe
 

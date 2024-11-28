@@ -1,5 +1,5 @@
 #!/bin/bash
-N=80
+N=92
 T=$(($N+8))
 INF=9
 echo "Compiling..."
@@ -9,7 +9,7 @@ for i in $(seq $INF $T)
 do
     ./generator.exe $i > project.$i.dat
     echo "Solving problem $i"
-    oplrun ../ilp/project.template.mod project.$i.dat | grep -E "OBJECTIVE|Commission" > project.$i.sol
+    { time timeout 1800 oplrun ../ilp/project.template.mod project.$i.dat | grep -E "OBJECTIVE|Commission" > project.$i.sol ; } 2>> project.$i.sol
     echo "Solution to $i"
     cat project.$i.sol
 done
