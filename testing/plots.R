@@ -86,5 +86,10 @@ graspTime <- (graspTime1 + graspTime2 + graspTime3)/3
 
 lim = 100
 x = 1:lim
-plot(x,greedyTime, type="l")
+plot(x,greedyTime, type="l",log="y", ylim=c(0.005,5.0))
 lines(x,localSearchTime, type = "l", col="blue")
+lines(x,graspTime, col="red")
+lines(x,cplexTime, col="green")
+
+plot(x, cplexTime, type="l", log="y")
+lines(x,graspTime, col="red")

@@ -6,8 +6,7 @@ echo "Compilation done! Executing Greedy..."
 N=3
 
 # Clean and recreate output directory
-[ -d localSearchOutput ] && rm -fr localSearchOutput/
-mkdir localSearchOutput
+rm localSearchOutput/*.log
 
 # Run heuristic.exe N times for each data file
 for i in $(seq $N); do

@@ -7,8 +7,7 @@ N=3
 alpha=0.30
 
 # Clean and recreate output directory
-[ -d graspOutput ] && rm -fr graspOutput/
-mkdir graspOutput
+rm graspOutput/*.log
 
 # Run heuristic.exe N times for each data file
 for i in $(seq $N); do
