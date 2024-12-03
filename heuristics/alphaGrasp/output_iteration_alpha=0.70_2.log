@@ -1,0 +1,1026 @@
+=======================================================
+Iteration 2
+GRASP
+OBJECTIVE: 0.67
+Commision:  1 3 4 6 7 8 
+========================
+Real solution to problem ../samples/project.1.dat:
+OBJECTIVE: 0.67
+Commission: 1 3 4 6 7 8
+========================
+GRASP
+OBJECTIVE: 0.503333
+Commision:  1 3 4 6 7 8 
+========================
+Real solution to problem ../samples/project.2.dat:
+OBJECTIVE: 0.5033333
+Commission: 1 3 4 6 7 8
+========================
+GRASP
+OBJECTIVE: 0.466667
+Commision:  1 3 4 5 6 7 
+========================
+Real solution to problem ../samples/project.3.dat:
+OBJECTIVE: 0.4666667
+Commission: 1 3 4 5 6 7
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.4.dat:
+========================
+GRASP
+OBJECTIVE: 0.43
+Commision:  3 4 5 6 7 
+========================
+Real solution to problem ../samples/project.5.dat:
+OBJECTIVE: 0.43
+Commission: 3 4 5 6 7
+========================
+GRASP
+OBJECTIVE: 0.43
+Commision:  3 4 5 6 7 
+========================
+Real solution to problem ../samples/project.6.dat:
+OBJECTIVE: 0.55
+Commission: 1 3 6 7 8
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.7.dat:
+========================
+GRASP
+OBJECTIVE: 0.45
+Commision:  3 4 5 7 
+========================
+Real solution to problem ../samples/project.8.dat:
+OBJECTIVE: 0.6083333
+Commission: 1 3 7 8
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.9.dat:
+
+real	0m0.099s
+user	0m0.020s
+sys	0m0.039s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.10.dat:
+
+real	0m0.038s
+user	0m0.015s
+sys	0m0.025s
+========================
+GRASP
+OBJECTIVE: 0.94
+Commision:  1 10 11 
+========================
+Real solution to problem ../samples/project.11.dat:
+OBJECTIVE: 0.9633333
+Commission: 2 6 8 
+
+real	0m0.145s
+user	0m0.294s
+sys	0m0.064s
+========================
+GRASP
+OBJECTIVE: 0.779524
+Commision:  1 3 5 8 9 10 11 
+========================
+Real solution to problem ../samples/project.12.dat:
+OBJECTIVE: 0.782381
+Commission: 1 3 4 7 8 9 10 
+
+real	0m0.332s
+user	0m1.770s
+sys	0m0.058s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.13.dat:
+
+real	0m0.032s
+user	0m0.010s
+sys	0m0.024s
+========================
+GRASP
+OBJECTIVE: 0.99
+Commision:  12 14 
+========================
+Real solution to problem ../samples/project.14.dat:
+OBJECTIVE: 0.99
+Commission: 5 6 
+
+real	0m0.314s
+user	0m2.649s
+sys	0m0.044s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.15.dat:
+
+real	0m0.033s
+user	0m0.020s
+sys	0m0.015s
+========================
+GRASP
+OBJECTIVE: 0.853333
+Commision:  2 9 14 
+========================
+Real solution to problem ../samples/project.16.dat:
+OBJECTIVE: 0.9133333
+Commission: 8 10 12 
+
+real	0m0.282s
+user	0m1.005s
+sys	0m0.050s
+========================
+GRASP
+OBJECTIVE: 0.846667
+Commision:  3 4 13 
+========================
+Real solution to problem ../samples/project.17.dat:
+OBJECTIVE: 0.9266667
+Commission: 2 5 8 
+
+real	0m0.265s
+user	0m0.366s
+sys	0m0.050s
+========================
+GRASP
+OBJECTIVE: 0.702222
+Commision:  1 2 3 5 6 7 9 10 12 15 
+========================
+Real solution to problem ../samples/project.18.dat:
+OBJECTIVE: 0.7086667
+Commission: 1 2 3 4 5 7 9 11 12 15 
+
+real	0m/.751s
+user	0m0.685s
+sys	0m0.047s
+========================
+GRASP
+OBJECTIVE: 0.923333
+Commision:  1 4 17 
+========================
+Real solution to problem ../samples/project.19.dat:
+OBJECTIVE: 0.9233333
+Commission: 1 4 17 
+
+real	0m0.307s
+user	0m1.834s
+sys	0m0.072s
+========================
+GRASP
+OBJECTIVE: 0.863
+Commision:  1 10 11 13 15 
+========================
+Real solution to problem ../samples/project.20.dat:
+OBJECTIVE: 0.863
+Commission: 1 10 11 13 15 
+
+real	0m0.274s
+user	0m1.742s
+sys	0m0.069s
+========================
+GRASP
+OBJECTIVE: 0.855
+Commision:  2 3 5 11 15 
+========================
+Real solution to problem ../samples/project.21.dat:
+OBJECTIVE: 0.855
+Commission: 2 3 5 11 15 
+
+real	0m0.246s
+user	0m0.880s
+sys	0m0.086s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.22.dat:
+OBJECTIVE: 0.6230303
+Commission: 1 3 4 5 7 8 9 10 11 12 20 22 
+
+real	0m0.048s
+user	0m0.027s
+sys	0m0.031s
+========================
+GRASP
+OBJECTIVE: 0.723214
+Commision:  2 3 5 6 8 9 11 13 
+========================
+Real solution to problem ../samples/project.23.dat:
+OBJECTIVE: 0.7378571
+Commission: 1 2 4 5 6 7 9 19 
+
+real	0m0.306s
+user	0m2.809s
+sys	0m0.039s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.24.dat:
+OBJECTIVE: 0.6432967
+Commission: 1 3 6 7 9 11 12 15 16 17 18 19 20 21 
+
+real	0m0.316s
+user	0m1.885s
+sys	0m0.077s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.25.dat:
+OBJECTIVE: 0.6332967
+Commission: 3 5 6 7 9 10 13 15 16 17 19 21 23 24 
+
+real	0m0.275s
+user	0m1.842s
+sys	0m0.064s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.26.dat:
+OBJECTIVE: 0.6452747
+Commission: 2 3 6 7 8 9 10 14 16 17 21 22 24 26 
+
+real	0m0.284s
+user	0m1.674s
+sys	0m0.078s
+========================
+GRASP
+OBJECTIVE: 0.93
+Commision:  11 21 25 
+========================
+Real solution to problem ../samples/project.27.dat:
+OBJECTIVE: 0.9433333
+Commission: 18 23 25 
+
+real	0m0.276s
+user	0m1.374s
+sys	0m0.047s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.28.dat:
+OBJECTIVE: 0.5988333
+Commission: 1 2 4 5 8 9 10 11 12 15 16 17 23 24 27 28 
+
+real	0m0.037s
+user	0m0.023s
+sys	0m0.016s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.29.dat:
+OBJECTIVE: 0.6125
+Commission: 2 3 4 6 7 8 11 12 14 15 19 20 21 23 26 27 
+
+real	0m0.272s
+user	0m0.999s
+sys	0m0.056s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.30.dat:
+OBJECTIVE: 0.664
+Commission: 2 3 4 7 10 14 15 16 18 20 21 23 24 25 27 28 
+
+real	0m0.207s
+user	0m0.691s
+sys	0m0.065s
+========================
+GRASP
+OBJECTIVE: 0.706667
+Commision:  2 7 12 25 27 30 31 
+========================
+Real solution to problem ../samples/project.31.dat:
+OBJECTIVE: 0.7066667
+Commission: 2 7 12 25 27 30 31 
+
+real	0m0.280s
+user	0m1.048s
+sys	0m0.059s
+========================
+GRASP
+OBJECTIVE: 0.733333
+Commision:  1 4 5 6 7 14 25 
+========================
+Real solution to problem ../samples/project.32.dat:
+OBJECTIVE: 0.7333333
+Commission: 1 4 5 6 7 14 25 
+
+real	0m0.244s
+user	0m0.905s
+sys	0m0.049s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.33.dat:
+OBJECTIVE: 0.71
+Commission: 1 5 6 7 19 25 33 
+
+real	0m0.279s
+user	0m1.739s
+sys	0m0.058s
+========================
+GRASP
+OBJECTIVE: 0.742857
+Commision:  2 4 7 10 19 22 27 
+========================
+Real solution to problem ../samples/project.34.dat:
+OBJECTIVE: 0.7428571
+Commission: 2 4 7 10 19 22 27 
+
+real	0m0.262s
+user	0m1.639s
+sys	0m0.081s
+========================
+GRASP
+OBJECTIVE: 0.762778
+Commision:  6 7 13 18 22 23 29 30 35 
+========================
+Real solution to problem ../samples/project.35.dat:
+OBJECTIVE: 0.7627778
+Commission: 6 7 13 18 22 23 29 30 35 
+
+real	0m1.071s
+user	0m7.364s
+sys	0m0.191s
+========================
+GRASP
+OBJECTIVE: 0.65375
+Commision:  1 2 6 9 11 12 13 16 17 19 20 26 29 30 34 35 
+========================
+Real solution to problem ../samples/project.36.dat:
+OBJECTIVE: 0.65725
+Commission: 1 2 4 9 11 12 13 16 17 18 19 20 22 28 29 35 
+
+real	0m20.372s
+user	4m12.282s
+sys	0m0.552s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.37.dat:
+OBJECTIVE: 0.715
+Commission: 1 3 4 5 6 7 17 21 35 
+
+real	0m0.143s
+user	0m0.847s
+sys	0m0.036s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.38.dat:
+OBJECTIVE: 0.6886111
+Commission: 1 4 6 7 10 14 24 33 35 
+
+real	0m0.150s
+user	0m0.867s
+sys	0m0.029s
+========================
+GRASP
+OBJECTIVE: 0.708788
+Commision:  3 4 8 9 10 15 17 19 22 23 34 36 
+========================
+Real solution to problem ../samples/project.39.dat:
+OBJECTIVE: 0.7160606
+Commission: 3 4 9 15 17 19 20 21 27 31 32 34 
+
+real	0m0.611s
+user	0m5.911s
+sys	0m0.145s
+========================
+GRASP
+OBJECTIVE: 0.743929
+Commision:  4 7 9 23 27 28 30 33 
+========================
+Real solution to problem ../samples/project.40.dat:
+OBJECTIVE: 0.7439286
+Commission: 4 7 9 23 27 28 30 33 
+
+real	0m0.140s
+user	0m0.532s
+sys	0m0.038s
+========================
+GRASP
+OBJECTIVE: 0.769643
+Commision:  4 7 8 17 20 28 30 33 
+========================
+Real solution to problem ../samples/project.41.dat:
+OBJECTIVE: 0.7696429
+Commission: 4 7 8 17 20 28 30 33 
+
+real	0m0.131s
+user	0m0.542s
+sys	0m0.055s
+========================
+GRASP
+OBJECTIVE: 0.7175
+Commision:  4 10 11 16 19 20 23 42 
+========================
+Real solution to problem ../samples/project.42.dat:
+OBJECTIVE: 0.7357143
+Commission: 1 4 6 9 10 17 20 33 
+
+real	0m0.269s
+user	0m2.097s
+sys	0m0.056s
+========================
+GRASP
+OBJECTIVE: 0.762143
+Commision:  4 6 7 9 11 17 33 43 
+========================
+Real solution to problem ../samples/project.43.dat:
+OBJECTIVE: 0.7621429
+Commission: 4 6 7 9 11 17 33 43 
+
+real	0m0.190s
+user	0m1.330s
+sys	0m0.059s
+========================
+GRASP
+OBJECTIVE: 0.648529
+Commision:  2 3 5 7 8 9 11 12 15 16 17 18 21 26 29 41 44 
+========================
+Real solution to problem ../samples/project.44.dat:
+OBJECTIVE: 0.6530882
+Commission: 2 3 5 7 9 14 15 16 17 18 20 21 28 29 36 39 41 
+
+real	0m3.216s
+user	0m37.086s
+sys	0m0.215s
+========================
+GRASP
+OBJECTIVE: 0.714909
+Commision:  2 5 7 8 9 11 12 22 33 37 42 
+========================
+Real solution to problem ../samples/project.45.dat:
+OBJECTIVE: 0.7149091
+Commission: 2 5 7 8 9 11 12 22 33 37 42 
+
+real	0m0.448s
+user	0m3.930s
+sys	0m0.116s
+========================
+GRASP
+OBJECTIVE: 0.709636
+Commision:  5 9 12 13 17 18 20 30 38 42 45 
+========================
+Real solution to problem ../samples/project.46.dat:
+OBJECTIVE: 0.7096364
+Commission: 5 9 12 13 17 18 20 30 38 42 45 
+
+real	0m0.467s
+user	0m3.869s
+sys	0m0.116s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.47.dat:
+OBJECTIVE: 0.6607843
+Commission: 2 5 7 8 10 12 13 15 16 20 22 24 25 32 34 36 44 47 
+
+real	0m0.408s
+user	0m2.626s
+sys	0m0.083s
+========================
+GRASP
+OBJECTIVE: 0.655229
+Commision:  2 4 6 7 8 12 13 16 17 22 24 25 32 36 38 44 45 48 
+========================
+Real solution to problem ../samples/project.48.dat:
+OBJECTIVE: 0.6552288
+Commission: 2 4 6 7 8 12 13 16 17 22 24 25 32 36 38 44 45 48 
+
+real	0m0.927s
+user	0m9.032s
+sys	0m0.212s
+========================
+GRASP
+OBJECTIVE: 0.6
+Commision:  3 4 8 10 11 23 26 33 36 43 48 
+========================
+Real solution to problem ../samples/project.49.dat:
+OBJECTIVE: 0.6
+Commission: 3 4 8 10 11 23 26 33 36 43 48 
+
+real	0m0.150s
+user	0m0.902s
+sys	0m0.025s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.50.dat:
+OBJECTIVE: 0.664183
+Commission: 3 4 7 9 10 12 14 15 17 21 22 28 34 40 43 47 49 50 
+
+real	0m0.822s
+user	0m8.000s
+sys	0m0.085s
+========================
+GRASP
+OBJECTIVE: 0.615417
+Commision:  3 4 5 6 7 9 10 12 13 14 23 25 27 39 40 47 
+========================
+Real solution to problem ../samples/project.51.dat:
+OBJECTIVE: 0.63725
+Commission: 3 6 7 9 10 12 13 14 18 25 27 33 43 46 47 48 
+
+real	0m0.177s
+user	0m0.923s
+sys	0m0.042s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.52.dat:
+
+real	0m0.029s
+user	0m0.014s
+sys	0m0.017s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.53.dat:
+OBJECTIVE: 0.65825
+Commission: 3 4 5 6 7 9 11 12 13 14 15 22 25 46 47 53 
+
+real	0m0.131s
+user	0m0.616s
+sys	0m0.033s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.54.dat:
+
+real	0m0.031s
+user	0m0.017s
+sys	0m0.014s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.55.dat:
+OBJECTIVE: 0.6171385
+Commission: 4 5 7 8 14 15 19 20 21 22 28 29 32 33 34 38 40 42 43 44 46 48 51 52 53 54 
+
+real	0m0.191s
+user	0m0.846s
+sys	0m0.028s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.56.dat:
+OBJECTIVE: 0.5958995
+Commission: 1 2 4 5 6 8 10 11 12 14 15 20 21 22 25 26 27 28 29 30 35 39 40 50 51 53 54 56 
+
+real	0m4.612s
+user	0m31.897s
+sys	0m0.525s
+========================
+GRASP
+OBJECTIVE: 0.641833
+Commision:  3 4 5 6 7 8 9 16 18 25 31 32 34 40 43 48 
+========================
+Real solution to problem ../samples/project.57.dat:
+OBJECTIVE: 0.6508333
+Commission: 3 4 5 7 8 10 13 16 27 28 32 34 36 43 48 56 
+
+real	0m1.097s
+user	0m9.655s
+sys	0m0.274s
+========================
+GRASP
+OBJECTIVE: 0.65152
+Commision:  3 10 15 16 18 19 20 21 25 29 32 36 37 44 47 49 52 54 58 
+========================
+Real solution to problem ../samples/project.58.dat:
+OBJECTIVE: 0.6647953
+Commission: 1 8 9 10 13 15 16 19 21 29 35 43 44 47 48 49 51 52 58 
+
+real	0m34.276s
+user	7m11.469s
+sys	0m0.791s
+========================
+GRASP
+OBJECTIVE: 0.690256
+Commision:  4 5 8 9 11 20 21 26 29 32 35 41 51 
+========================
+Real solution to problem ../samples/project.59.dat:
+OBJECTIVE: 0.6924359
+Commission: 4 5 8 9 11 14 22 26 29 35 41 50 51 
+
+real	0m2.044s
+user	0m21.725s
+sys	0m0.234s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.60.dat:
+
+real	0m0.035s
+user	0m0.024s
+sys	0m0.012s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.61.dat:
+OBJECTIVE: 0.6682456
+Commission: 2 8 15 16 17 24 26 29 30 31 33 34 35 36 37 41 47 55 57 
+
+real	0m3.648s
+user	0m41.605s
+sys	0m0.371s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.62.dat:
+OBJECTIVE: 0.6448188
+Commission: 2 3 5 6 8 10 12 14 18 19 21 22 23 25 34 36 38 40 41 43 45 49 57 59 
+
+real	0m11.385s
+user	2m16.634s
+sys	0m0.396s
+========================
+GRASP
+OBJECTIVE: 0.645014
+Commision:  1 3 10 11 14 16 18 20 21 22 23 25 27 28 32 37 38 39 41 44 45 50 54 57 60 61 62 
+========================
+Real solution to problem ../samples/project.63.dat:
+
+real	30m0.444s
+user	352m8.110s
+sys	0m21.871s
+========================
+GRASP
+OBJECTIVE: 0.663987
+Commision:  2 3 6 10 13 17 18 21 23 26 32 45 52 53 54 56 62 63 
+========================
+Real solution to problem ../samples/project.64.dat:
+OBJECTIVE: 0.6639869
+Commission: 2 3 6 10 13 17 18 21 23 26 32 45 52 53 54 56 62 63 
+
+real	1m53.161s
+user	22m20.736s
+sys	0m2.316s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.65.dat:
+OBJECTIVE: 0.5984046
+Commission: 2 4 7 8 9 10 12 13 15 16 21 22 23 25 26 30 34 37 40 50 51 58 60 61 63 64 65 
+
+real	0m0.198s
+user	0m0.666s
+sys	0m0.063s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.66.dat:
+OBJECTIVE: 0.6298291
+Commission: 2 4 9 10 12 13 14 25 27 30 33 36 39 41 42 43 50 51 52 54 55 56 58 59 60 62 66 
+
+real	5m47.378s
+user	70m4.469s
+sys	0m3.987s
+========================
+GRASP
+OBJECTIVE: 0.636405
+Commision:  3 6 7 9 12 15 29 35 36 40 41 43 48 54 55 59 60 62 
+========================
+Real solution to problem ../samples/project.67.dat:
+OBJECTIVE: 0.6510458
+Commission: 3 4 7 9 11 12 14 15 16 18 28 35 43 45 50 56 61 62 
+
+real	0m5.290s
+user	1m4.053s
+sys	0m0.422s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.68.dat:
+OBJECTIVE: 0.7251515
+Commission: 1 2 21 27 30 31 44 45 47 50 53 55 
+
+real	0m1.015s
+user	0m9.413s
+sys	0m0.241s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.69.dat:
+OBJECTIVE: 0.632684
+Commission: 1 4 7 8 10 11 13 16 17 20 22 27 28 29 34 37 39 40 42 57 58 63 
+
+real	0m1.835s
+user	0m17.505s
+sys	0m0.293s
+========================
+GRASP
+OBJECTIVE: 0.62655
+Commision:  2 3 6 8 9 10 11 13 17 19 22 23 28 30 53 54 55 57 62 
+========================
+Real solution to problem ../samples/project.70.dat:
+OBJECTIVE: 0.6563158
+Commission: 2 3 4 7 10 11 13 18 22 28 33 34 45 54 58 60 61 62 67 
+
+real	0m44.970s
+user	8m38.716s
+sys	0m1.314s
+========================
+GRASP
+OBJECTIVE: 0.654968
+Commision:  1 3 7 9 13 14 20 21 24 27 28 31 37 42 53 61 68 69 
+========================
+Real solution to problem ../samples/project.71.dat:
+OBJECTIVE: 0.6549673
+Commission: 1 3 7 9 13 14 20 21 24 27 28 31 37 42 53 61 68 69 
+
+real	0m45.689s
+user	9m23.344s
+sys	0m1.052s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.72.dat:
+
+real	0m0.049s
+user	0m0.036s
+sys	0m0.013s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.73.dat:
+OBJECTIVE: 0.594064
+Commission: 2 5 6 9 11 15 16 17 18 20 25 28 30 34 37 39 40 46 48 50 52 54 57 60 64 66 67 69 73 
+
+real	0m0.468s
+user	0m2.540s
+sys	0m0.085s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.74.dat:
+OBJECTIVE: 0.5920936
+Commission: 4 6 7 8 10 11 13 14 16 17 19 20 22 23 25 26 28 30 33 34 46 50 54 57 60 61 67 71 73 
+
+real	0m0.575s
+user	0m2.507s
+sys	0m0.179s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.75.dat:
+OBJECTIVE: 0.6562573
+Commission: 1 2 4 5 7 8 10 11 13 15 16 21 25 30 41 43 46 60 68 
+
+real	0m22.045s
+user	4m30.246s
+sys	0m0.662s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.76.dat:
+OBJECTIVE: 0.6104233
+Commission: 4 6 7 8 9 10 12 14 15 16 18 19 23 26 28 31 34 40 41 45 46 47 60 65 69 70 72 73 
+
+real	0m0.464s
+user	0m1.792s
+sys	0m0.183s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.77.dat:
+OBJECTIVE: 0.6283598
+Commission: 4 7 8 9 10 11 14 15 18 20 21 26 31 32 33 34 39 41 43 44 45 47 53 60 65 69 74 77 
+
+real	0m24.846s
+user	3m55.584s
+sys	0m1.072s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.78.dat:
+
+real	0m0.172s
+user	0m0.149s
+sys	0m0.032s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.79.dat:
+OBJECTIVE: 0.6757368
+Commission: 1 4 9 10 16 17 20 23 28 31 32 33 39 48 49 52 58 63 76 78 
+
+real	0m45.834s
+user	7m54.574s
+sys	0m0.918s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.80.dat:
+OBJECTIVE: 0.6167126
+Commission: 3 5 6 8 11 16 17 19 22 24 25 26 28 33 34 35 37 38 41 42 43 47 49 51 57 59 64 69 70 73 
+
+real	0m3.007s
+user	0m28.753s
+sys	0m0.594s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.81.dat:
+
+real	0m0.052s
+user	0m0.034s
+sys	0m0.018s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.82.dat:
+OBJECTIVE: 0.6003
+Commission: 5 6 8 10 11 13 14 19 21 22 25 27 28 29 34 37 45 48 52 53 54 68 70 79 81 
+
+real	0m0.137s
+user	0m0.691s
+sys	0m0.038s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.83.dat:
+OBJECTIVE: 0.6251852
+Commission: 3 4 5 8 9 10 11 12 13 14 16 24 33 41 45 49 52 54 62 66 67 69 71 76 80 81 83 
+
+real	0m4.214s
+user	0m48.961s
+sys	0m0.245s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.84.dat:
+OBJECTIVE: 0.619496
+Commission: 1 2 4 5 6 7 8 11 12 13 15 16 19 20 24 25 30 32 33 34 47 53 54 55 62 67 70 71 73 74 76 79 
+
+real	0m5.396s
+user	0m43.350s
+sys	0m1.044s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.85.dat:
+OBJECTIVE: 0.6284615
+Commission: 1 3 4 6 8 9 11 17 18 21 22 23 25 30 34 35 37 38 46 51 53 60 61 63 66 69 70 
+
+real	0m1.220s
+user	0m9.028s
+sys	0m0.179s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.86.dat:
+OBJECTIVE: 0.6365231
+Commission: 1 8 12 14 15 16 17 19 20 25 26 29 35 37 41 43 53 59 61 63 64 66 67 75 82 83 
+
+real	0m41.599s
+user	7m18.999s
+sys	0m1.329s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.87.dat:
+OBJECTIVE: 0.5831378
+Commission: 1 4 5 6 8 9 11 15 17 18 20 21 24 26 27 29 31 32 33 34 35 37 39 41 52 53 54 55 56 59 60 62 63 64 65 66 67 70 71 72 74 76 78 80 81 83 85 86 87 
+
+real	0m1.040s
+user	0m3.755s
+sys	0m0.144s
+========================
+GRASP
+OBJECTIVE: 0.615032
+Commision:  2 3 5 6 10 15 19 20 24 25 28 29 37 41 43 50 51 52 53 54 57 58 62 64 70 73 78 79 80 86 87 
+========================
+Real solution to problem ../samples/project.88.dat:
+OBJECTIVE: 0.6272258
+Commission: 2 3 6 15 19 21 24 28 31 32 37 39 41 43 47 49 50 51 54 57 58 62 64 65 70 73 78 79 80 86 87 
+
+real	3m1.714s
+user	35m10.137s
+sys	0m1.538s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.89.dat:
+OBJECTIVE: 0.6576355
+Commission: 1 2 5 7 9 10 12 16 19 29 33 35 37 38 40 41 42 47 48 49 50 51 52 55 65 69 74 76 89 
+
+real	28m14.204s
+user	358m38.723s
+sys	0m10.579s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.90.dat:
+OBJECTIVE: 0.5986452
+Commission: 4 5 7 8 9 12 13 14 15 17 18 19 22 23 24 25 28 31 40 52 54 61 64 65 74 78 80 83 85 86 90 
+
+real	0m0.316s
+user	0m0.515s
+sys	0m0.042s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.91.dat:
+OBJECTIVE: 0.6147312
+Commission: 3 4 5 6 9 11 13 14 21 23 24 25 26 28 29 30 35 37 38 52 58 61 65 68 72 73 74 80 81 84 85 
+
+real	0m1.886s
+user	0m18.130s
+sys	0m0.514s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.92.dat:
+OBJECTIVE: 0.631707
+Commission: 1 3 7 9 10 11 13 16 17 19 20 21 22 23 29 30 34 35 37 38 39 40 46 48 49 50 54 57 59 60 61 64 70 75 78 81 82 84 
+
+real	0m0.515s
+user	0m1.274s
+sys	0m0.091s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.93.dat:
+
+real	0m0.072s
+user	0m0.065s
+sys	0m0.008s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.94.dat:
+OBJECTIVE: 0.603914
+Commission: 6 8 10 12 14 15 16 17 18 23 24 26 27 29 31 32 37 46 53 58 60 62 68 69 71 81 82 83 88 90 94 
+
+real	0m1.207s
+user	0m6.081s
+sys	0m0.486s
+========================
+GRASP
+OBJECTIVE: 0.676444
+Commision:  1 6 8 17 25 32 39 44 57 79 
+========================
+Real solution to problem ../samples/project.95.dat:
+OBJECTIVE: 0.6897778
+Commission: 1 2 5 6 10 27 32 56 65 81 
+
+real	0m1.931s
+user	0m18.310s
+sys	0m0.220s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.96.dat:
+OBJECTIVE: 0.6024501
+Commission: 1 3 4 5 6 7 10 11 13 15 17 18 20 22 23 26 28 29 38 54 61 65 69 79 85 88 94 
+
+real	0m0.242s
+user	0m1.548s
+sys	0m0.043s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.97.dat:
+OBJECTIVE: 0.6044729
+Commission: 1 2 3 4 5 7 9 10 13 15 17 18 20 22 23 25 27 36 42 47 50 61 75 83 85 88 89 
+
+real	0m0.447s
+user	0m1.692s
+sys	0m0.157s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.98.dat:
+
+real	0m0.220s
+user	0m0.101s
+sys	0m0.072s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.99.dat:
+OBJECTIVE: 0.6088161
+Commission: 2 10 12 13 16 17 18 23 26 28 30 31 35 36 37 38 39 43 44 45 47 48 57 59 60 61 62 67 68 70 72 76 78 81 83 84 85 87 91 92 95 97 98 99 
+
+real	1m3.435s
+user	10m55.981s
+sys	0m0.759s
+========================
+GRASP
+========================
+Real solution to problem ../samples/project.100.dat:
+OBJECTIVE: 0.6697
+Commission: 1 6 8 10 11 13 14 15 17 21 23 28 30 37 43 53 54 55 65 66 73 85 91 92 94 
+
+real	8m24.450s
+user	104m17.581s
+sys	0m3.013s
+========================

@@ -1,34 +1,26 @@
 #!/bin/bash
 echo "Compiling..."
 g++ -O2 -o heuristic.exe main.cc
-echo "Compilation done! Executing heuristics..."
+echo "Compilation done! Executing Greedy..."
 
-alpha=(0.05 0.10 0.15 0.20 0.25 0.30 0.50 1.00)
 N=3
+alpha=0.30
 
+# Clean and recreate output directory
+rm graspOutput/*.log
 
-for a in ${alpha[@]}
-do
-    for i in $(seq $N)
-    do
-        echo "Starting iteration $i alpha=$a"
-        output_file="output_iteration_alpha=${a}_$i.log"
-        > "$output_file"                     
+# Run heuristic.exe N times for each data file
+for i in $(seq $N); do
+    for f in $(find ../samples/data -maxdepth 1 -name '*.dat' | sort -V); do
+        num=$(basename "$f" | grep -oE '[0-9]+')
+        output="graspOutput/graspIter${i}_Size${num}.log"
+        echo "Running: Iteration $i Size $num"
 
-        echo "=======================================================" >> "$output_file"
-        echo "Iteration $i" >> "$output_file"
-        for f in $(ls ../samples/*.dat | sort -V)
-        do
-            echo "GRASP" >> "$output_file"
-            ./heuristic.exe $f 3 $a >> "$output_file" 2>&1
-            echo "========================" >> "$output_file"
-            echo "Real solution to problem $f:" >> "$output_file"
-            out="${f%.dat}.sol"
-            cat "$out" >> "$output_file"
-            echo "========================" >> "$output_file"
-        done
+        # Redirect both time and program output to the same file
+        { 
+            { time ./heuristic.exe "$f" 3 $alpha; } 2>&1 
+        } >> "$output"
     done
 done
 
 rm heuristic.exe
-

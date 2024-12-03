@@ -164,7 +164,10 @@ int main(int argc, char **argv) {
     bool sol = true;
     if (greedySolution || localSearch) sol = greedy(D,np,N,d,m, selected);
     else if (GRASP) sol = graspExecution(D, np, N, d,m, selected, alpha, iter); 
-    if(!sol) return -1;
+    if(!sol) {
+        cout << "OBJECTIVE: No Solution" << endl;
+        return -1;
+    }
     
     if (localSearch) hillClimbing(D,np,N,d,m, selected);
 

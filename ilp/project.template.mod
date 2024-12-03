@@ -10,19 +10,6 @@ float      m[1..N][1..N] = ...;
 range nProf = 1..N;
 range nDep = 1..D;
 float avrg = 1.0;
-int b_ij[1..N][1..N];
-
-
-execute {
-    var numCom = 0;
-    for (var i in nDep) numCom += n[i]
-    avrg = 2.0 / (numCom * (numCom - 1));
-
-    for (var i in nProf) {
-        for (var j in nProf) b_ij[i][j] = m[i][j] >= 0.15;
-    }
-}
-
 
 // Define here your decision variables and
 // any other auxiliary program variables you need.
@@ -32,6 +19,11 @@ dvar boolean x_i[i in nProf];
 dvar boolean y_ij[i in nProf, j in nProf];
 
 //>>>>>>>>>>>>>>>>
+execute {
+    var numCom = 0;
+    for (var i in nDep) numCom += n[i]
+    avrg = 2.0 / (numCom * (numCom - 1));
+}
 //<<<<<<<<<<<<<<<<
 
 
