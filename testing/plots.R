@@ -40,22 +40,22 @@ data <- data.frame(cplexObj[lim],greedyObj[lim],localSearchObj[lim],graspObj[lim
 
 barplot(as.matrix(data))
 
-plot(xCplex, cplexObjFes, type = "h", col= "blue")
+plot(xCplex, cplexObjFes, type = "h", col= "blue",main= "Comparison of objective functions", xlab = "Sample", ylab = "Quality")
 points(xLocalSearch,localSearchSol, col="yellow",type="h")
 legend(70, 1, legend=c("Local Search", "Cplex"),
-       col=c("yellow", "blue"), lty=1:1, cex=0.8)
+       col=c("yellow", "blue"), lty=1:1, cex=1.5)
 
-plot(xCplex, cplexObjFes, type = "h", col= "blue")
+plot(xCplex, cplexObjFes, type = "h", col= "blue",main= "Comparison of objective functions", xlab = "Sample", ylab = "Quality")
 points(xGreedy,greedyObjSol, col="#C0FF00",type="h")
 legend(70, 1, legend=c("Greedy", "Cplex"),
-       col=c("#C0FF00", "blue"), lty=1:1, cex=0.8)
+       col=c("#C0FF00", "blue"), lty=1:1, cex=1.5)
 
-plot(xCplex, cplexObjFes, type = "h", col= "blue")
+plot(xCplex, cplexObjFes, type = "h", col= "blue",main= "Comparison of objective functions", xlab = "Sample", ylab = "Quality")
 points(xGrasp,graspObjSol, col="#FFC100",type="h")
 legend(70, 1, legend=c("Grasp", "Cplex"),
-       col=c("#FFC100", "blue"), lty=1:1, cex=0.8)
+       col=c("#FFC100", "blue"), lty=1:1, cex=1.5)
 
-plot(xCplex, cplexObjFes, type = "h", col= "black")
+plot(xCplex, cplexObjFes, type = "h", col= "black",main= "Comparison of all objective functions", xlab = "Sample", ylab = "Quality")
 points(xGrasp,graspObjSol, col="blue")
 points(xGreedy,greedyObjSol, col="red")
 points(xLocalSearch,localSearchSol, col="green")
@@ -86,10 +86,53 @@ graspTime <- (graspTime1 + graspTime2 + graspTime3)/3
 
 lim = 100
 x = 1:lim
-plot(x,greedyTime, type="l",log="y", ylim=c(0.005,5.0))
-lines(x,localSearchTime, type = "l", col="blue")
+plot(x,greedyTime, type="l",log="y", ylim=c(0.005,5.0), col="black", main="Time comparison (logarithmic scale)", xlab = "sample", ylab="time")
+lines(x,localSearchTime, type = "l", col="green")
 lines(x,graspTime, col="red")
-lines(x,cplexTime, col="green")
+lines(x,cplexTime, col="blue")
+legend(1, 5, legend=c("CPLEX", "Greedy","LocalSearch","GRASP"),
+       col=c("blue", "black","green","red"), lty=1:1, cex=1)
 
-plot(x, cplexTime, type="l", log="y")
+plot(x, cplexTime, type="l", log="y", col="blue", main = "Time: GRASP vs CPLEX (log-scale)",xlab = "sample", ylab="time")
 lines(x,graspTime, col="red")
+legend(1, 500, legend=c("CPLEX","GRASP"),
+       col=c("blue", "red"), lty=1:1, cex=1.5)
+
+plot(x, greedyTime, type="l", log="y", col="black", main = "Time: Local Search vs Greedy (log-scale)",xlab = "sample", ylab="time")
+lines(x,localSearchTime, col="green")
+legend(10,0.025,legend=c("Greedy","Local Search"),
+       col=c("black", "green"), lty=1:1, cex=1.5)
+
+##############33
+
+greedyPercentage = greedyObj/cplexObj
+greedyPercentage = greedyPercentage[!greedyPercentage %in% c(NaN)]
+greedyPercentage = greedyPercentage[!greedyPercentage %in% c(0.0)]
+GreedyClass1 = length(greedyPercentage[greedyPercentage > 0.9999999])
+GreedyClass2 = length(greedyPercentage[greedyPercentage >= 0.95]) - length(greedyPercentage[greedyPercentage > 0.9999999])
+GreedyClass3 = length(greedyPercentage[greedyPercentage >= 0.90]) - GreedyClass2 - GreedyClass1
+GreedyClass4 = length(greedyPercentage[greedyPercentage >= 0.85]) - GreedyClass2 - GreedyClass1 - GreedyClass3
+GreedyClass5 =length(greedyPercentage) - GreedyClass2 - GreedyClass1 - GreedyClass3 - GreedyClass4
+
+localPercentage = localSearchObj/cplexObj
+localPercentage = localPercentage[!localPercentage %in% c(NaN)]
+localPercentage = localPercentage[!localPercentage %in% c(0.0)]
+LocalClass1 = length(localPercentage[localPercentage > 0.9999999])
+LocalClass2 = length(localPercentage[localPercentage >= 0.95]) - LocalClass1
+LocalClass3 = length(localPercentage[localPercentage >= 0.90]) - LocalClass2 - LocalClass1
+LocalClass4 = length(localPercentage[localPercentage >= 0.85]) - LocalClass2 - LocalClass1 - LocalClass3
+LocalClass5 =length(localPercentage) - LocalClass2 - LocalClass1 - LocalClass3 - LocalClass4
+
+
+graspPercentage = graspObj/cplexObj
+graspPercentage = graspPercentage[!graspPercentage %in% c(NaN)]
+graspPercentage = graspPercentage[!graspPercentage %in% c(0.0)]
+GraspClass1 = length(graspPercentage[graspPercentage >= 1.00])
+GraspClass2 = length(graspPercentage[graspPercentage >= 0.95]) - GraspClass1
+GraspClass3 = length(graspPercentage[graspPercentage >= 0.90]) - GraspClass2 - GraspClass1
+GraspClass4 = length(graspPercentage[graspPercentage >= 0.85]) - GraspClass2 - GraspClass1 - GraspClass3
+GraspClass5 =length(graspPercentage) - GraspClass2 - GraspClass1 - GraspClass3 - GraspClass4
+
+diffGreedyLS = greedyTime - localSearchTime
+diffGreedyLS
+max(diffGreedyLS)
