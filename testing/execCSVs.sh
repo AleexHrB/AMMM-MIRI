@@ -1,8 +1,8 @@
 echo "Getting CPLEX Objective Function"
-../samples/getCSVObjSecond.sh > cplexObj.csv
+../samples/getCSVObj.sh > cplexObj.csv
 
 echo "Getting CPLEX Time"
-../samples/getCSVTimeSecond.sh > cplexTime.csv
+../samples/getCSVTime.sh > cplexTime.csv
 
 
 mode="greedy"

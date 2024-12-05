@@ -23,7 +23,9 @@ do
             ./heuristic.exe $f 3 $a >> "$output_file" 2>&1
             echo "========================" >> "$output_file"
             echo "Real solution to problem $f:" >> "$output_file"
-            out="${f%.dat}.sol"
+            name="${f%.dat}.sol"
+            name=${name##*/}
+            out="../samples/secondModel/$name"
             cat "$out" >> "$output_file"
             echo "========================" >> "$output_file"
         done
@@ -31,4 +33,3 @@ do
 done
 
 rm heuristic.exe
-
