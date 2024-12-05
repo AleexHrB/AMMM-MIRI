@@ -8,7 +8,7 @@ do
     { time timeout 1800 oplrun project.template.mod $f | grep -E "OBJECTIVE|Commission" > $out ; } 2>>$out 
     echo "Solution to $i"
     cat $out 
-    mv $out ../samples/firstModel/
+    mv $out ../samples/secondModel/
 done
 
 echo "Done!"

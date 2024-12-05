@@ -35,14 +35,13 @@ subject to {
     //No two professors with 0 compatibility
     forall(i in nProf)
         forall(j in nProf: j > i)
-            ceil(m[i][j]) >= y_ij[i][j];
+            ceil(m[i][j]) >= x_i[i] + x_i[j] - 1;
 
     //Correlation between y_ij and x_i, x_j
     forall(i in nProf)
         forall(j in nProf: j > i) {
             x_i[i] >= y_ij[i][j];
             x_i[j] >= y_ij[i][j];
-            y_ij[i][j] >= x_i[i] + x_i[j] - 1;
         }
 
     //Number of participants per department
@@ -52,7 +51,7 @@ subject to {
     //If not get along well then extra professor
     forall(i in nProf)
         forall(j in nProf: j > i && m[i][j] < 0.15) {
-            sum(k in nProf: m[i][k] > 0.85 && m[j][k] > 0.85) x_i[k] >= y_ij[i][j];
+            sum(k in nProf: m[i][k] > 0.85 && m[j][k] > 0.85) x_i[k] >= x_i[i] + x_i[j] - 1;
         }
 
 }
