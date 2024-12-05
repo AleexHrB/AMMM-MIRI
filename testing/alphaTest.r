@@ -82,28 +82,3 @@ numSolved
 hist(totalMean)
 totalMean
 max(totalMean)
-
-###############
-grasp1Obj<-read.csv("graspObj1.csv")$a
-grasp2Obj <-read.csv("graspObj2.csv")$a
-grasp3Obj <-read.csv("graspObj3.csv")$a
-graspObj <- grasp1Obj + grasp2Obj + grasp3Obj
-graspObj <- graspObj/3
-graspObjMax <- max(grasp1Obj, grasp2Obj, grasp3Obj)
-
-graspTime <- read.csv("graspTime.csv")$a
-
-greedyObj <- read.csv("greedyObj.csv")$a
-greedyTime <- read.csv("greedyTime.csv")$a
-
-localSearchObj <- read.csv("localSearchObj.csv")$a
-localSearchTime <- read.csv("localSearchTime.csv")$a
-
-X <- 1:100
-plot(X, greedyTime, type = "l", main="Time", xlab = "Time", ylab = "sample")
-lines(X,localSearchTime, type="l", col="blue")
-lines(X, graspTime, type="l", col="red")
-
-plot(X, greedyObj, type = "l", main="Time", xlab = "Time", ylab = "sample")
-lines(X,localSearchObj, type="l", col="blue")
-lines(X, graspObj, type="l", col="red")

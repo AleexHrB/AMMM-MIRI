@@ -136,3 +136,4 @@ GraspClass5 =length(graspPercentage) - GraspClass2 - GraspClass1 - GraspClass3 -
 diffGreedyLS = greedyTime - localSearchTime
 diffGreedyLS
 max(diffGreedyLS)
+
