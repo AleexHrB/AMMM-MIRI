@@ -23,6 +23,7 @@ There are many options to execute:
 - Scripts ./samples/getCSVObj.sh and ./samples/getCSVTime.sh can be used to obtain the Obj function and execution time of the CPLEX (Those scripts obtain the solution from the .sol files on the ./samples/secondModel directory.)
 - To execute the CPLEX model you can just use the ./ilp/execModel.sh script, and it will use all the samples on the ./samples/data director.
 - To execute our heuristics you can just use the scripts ./heuristics/execAlphaGrasp.sh, ./heuristics/execLocalSearch.sh, ./heruistics/execGrasp.sh and ./heuristics/execGreedy.sh, the outputs will be stored in their respective directories.
+- A single file can be executed by compiling the main file and running it with two arguments: the first argument is the path to a .dat file, and the second is the heuristic you want to execute (1 for Greedy, 2 for Local Search, or 3 for GRASP).
 - Finally you can use the scripts ./testing/execCSVs.sh and then ./testing/getSeconds.sh to generate the CSVs with the outputs of the all executions. The R scripts on the testing directory can be used to retrieve information of those CSV files. 
 - Have fun!
 
