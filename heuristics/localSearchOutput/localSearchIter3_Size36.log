@@ -1,6 +1,6 @@
 OBJECTIVE: 0.649417
 Commision:  2 3 6 10 11 12 13 16 17 19 20 26 29 30 34 35 
 
-real	0m0.006s
-user	0m0.006s
-sys	0m0.000s
+real	0m0.015s
+user	0m0.012s
+sys	0m0.004s
